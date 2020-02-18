@@ -42,28 +42,40 @@ namespace Homeworks
             // SwapDiagonals(hw3);
             // CountingBigNumbers(hw3, hw2);
 
-            //Gauss gauss = new Gauss(new int[,]{ { 6, 3, 5, 4, 77 },
-            //                                    { 3, -2, 8, 0, 67 },
-            //                                    { 7, 2, 0, 0, 43 },
-            //                                    { 4, 0, 0, 0, 12 } });
-            //int[] gaussResult = gauss.GetGuass();
-            //string gaussResultStr = hw2.PrintArray(gaussResult);
-            //Console.WriteLine(gaussResultStr);
+            /*  Human antosha = new Human("Antoshka", 35);
+              antosha.GetInfo();
+              //Human antosha = new Human("Antoshka");
+              //Human antosha = new Human(35);
+              //antosha.name = "Antoshka";
+              Human petya = new Human("Petya", 66);
+              petya.GetInfo();
+              Human sergey = new Human("Sergey", 33);
+              sergey.GetInfo();
 
+              Human kirill = new Human()
+              {
+                  name = "Kirill", 
+                  age = 23 
+              };
+
+              kirill.GetInfo();
+              */
+
+            // ------------ 
             
-            //Console.ReadLine();
-        }
+            
 
-        #region Random
+            Console.ReadLine();
+        }
+       
         static int Random(int min, int max)
         {
             Random rnd = new Random();
             int randomNumner = rnd.Next(min, max);
             return randomNumner;
         }
-        #endregion
 
-        #region HOMEWORK 1
+        //        HOMEWORK 1
         static void Credit(Homework_1 hw1)
         {
             double percentage;
@@ -342,9 +354,8 @@ namespace Homeworks
             Console.WriteLine($"Левая часть = {left}, правая часть = {right}");
             Console.WriteLine($"Равно - {result[0]} раз, не равно - {result[1]} раз.");
         }
-        #endregion
 
-        #region HOMEWORK 2
+        //        HOMEWORK 2
 
         static void ReverseNumber(Homework_2 hw2)
         {
@@ -555,9 +566,7 @@ namespace Homeworks
             Console.WriteLine($"min  = {minResult[0]}, minIndex  = {minResult[1]}");
             Console.WriteLine($"Sum = {sum}");
         }
-        #endregion
-
-        #region HOMEWORK 3
+        //        HOMEWORK 3
 
         static void QtyDigits(Homework_3 hw3)
         {
@@ -824,7 +833,6 @@ namespace Homeworks
             Console.WriteLine($"bigNumbers - {bigNumbersStr}");
             Console.WriteLine($"bigNumberCounter - {bigNumberCounter}");
         }
-        #endregion
 
     }
 }

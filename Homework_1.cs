@@ -23,7 +23,7 @@ namespace Homeworks
 
         public double CalcHypotenuse(double cathet_1, double cathet_2)
         {
-            return Math.Round(Math.Sqrt(Math.Pow(cathet_1, 2) + Math.Pow(cathet_2, 2)), 2);
+            return Math.Round(Math.Sqrt(Math.Pow(cathet_1, 2) + Math.Pow(cathet_2, 2)), 2);            
         }
 
         public float[] CalcStraightLineEquation(float x1, float y1, float x2, float y2)
@@ -110,7 +110,7 @@ namespace Homeworks
         }
         public int DefineQuarter(int x, int y)
         {
-            int quarter = 0;
+            int quarter=0;
 
             if (x > 0 && y > 0)
             {
@@ -127,14 +127,14 @@ namespace Homeworks
             else if (x < 0 && y > 0)
             {
                 quarter = 4;
-            }
+            }            
             return quarter;
         }
-
+        
         public bool IsInToCircle(double x, double y, double r)
         {
             double hypotenuse = CalcHypotenuse(x, y);
-
+            
             return r > hypotenuse;
         }
 
@@ -165,7 +165,7 @@ namespace Homeworks
         {
             multRes *= x % 10;
             x /= 10;
-            int[] result = new int[] { x, multRes };
+            int[] result = new int[] { x, multRes};
             return result;
         }
 
@@ -185,7 +185,7 @@ namespace Homeworks
             return right;
         }
 
-        public int[] EquationCheck(int a, int b, int amount = 100000)
+        public int[] EquationCheck(int a, int b, int amount=100000)
         {
             int counterTrue = 0, counterFalse = 0;
 

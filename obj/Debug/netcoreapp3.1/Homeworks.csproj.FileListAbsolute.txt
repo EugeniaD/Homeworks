@@ -37,16 +37,3 @@ D:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.AssemblyInfo.cs
 D:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.csproj.CopyComplete
 D:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.dll
 D:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.pdb
-F:\Homeworks\Homeworks\bin\Debug\netcoreapp3.1\Homeworks.exe
-F:\Homeworks\Homeworks\bin\Debug\netcoreapp3.1\Homeworks.deps.json
-F:\Homeworks\Homeworks\bin\Debug\netcoreapp3.1\Homeworks.runtimeconfig.json
-F:\Homeworks\Homeworks\bin\Debug\netcoreapp3.1\Homeworks.runtimeconfig.dev.json
-F:\Homeworks\Homeworks\bin\Debug\netcoreapp3.1\Homeworks.dll
-F:\Homeworks\Homeworks\bin\Debug\netcoreapp3.1\Homeworks.pdb
-F:\Homeworks\Homeworks\bin\Debug\netcoreapp3.1\nunit.framework.dll
-F:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.csprojAssemblyReference.cache
-F:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.AssemblyInfoInputs.cache
-F:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.AssemblyInfo.cs
-F:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.csproj.CopyComplete
-F:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.dll
-F:\Homeworks\Homeworks\obj\Debug\netcoreapp3.1\Homeworks.pdb

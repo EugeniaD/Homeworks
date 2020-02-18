@@ -5,7 +5,7 @@ using System.Text;
 namespace Homeworks
 {
     public class Homework_2
-    {
+    {        
         public int FlipNumberBackwards(int n)
         {
             string a = "";
@@ -45,7 +45,7 @@ namespace Homeworks
             return result;
         }
 
-        public int CheckRandom(int amount) // --------------рандом - не делать тест 
+        public int CheckRandom(int amount) // -------------- не делать тест ?
         {
             int n, count = 0;
             Random rnd = new Random();
@@ -61,13 +61,13 @@ namespace Homeworks
             return count;
         }
 
-        public double CalcPercentage(int count, int amount)
+        public double CalcPercentage(int count, int amount)  
         {
-            double perc = Math.Round((count * 100.0 / amount), 2);
+            double perc = Math.Round(( count * 100.0 / amount),2);
             return perc;
         }
 
-        public string CheckEquality(int number, int guess)
+        public string CheckEquality(int number, int guess)  
         {
             string result;
             if (guess > number)
@@ -89,7 +89,7 @@ namespace Homeworks
         public int[] FibonacciOfNumber(int number)
         {
             int fib = 2, fib1 = 1, x;
-            int[] fibArr = new int[number];
+            int [] fibArr = new int[number] ;
             fibArr[0] = 1;
 
             for (int i = 1; i < number; i++)
@@ -103,13 +103,13 @@ namespace Homeworks
                     x = fib1;
                     fib1 = fib;
                     fib = x + fib1;
-                    fibArr[i] = fib1;
+                    fibArr[i]= fib1;
                 }
             }
             return fibArr;
         }
 
-        public int[] FillArray(int length, int min = 0, int max = 100)
+        public int[] FillArray(int length,int min = 0, int max = 100) // ----------- не делать тест ?
         {
             int[] arr = new int[length];
             Random rnd = new Random();
@@ -118,9 +118,9 @@ namespace Homeworks
                 arr[i] = rnd.Next(min, max);
             }
             return arr;
-        }// -----------------рандом - не делать тест
+        }
 
-        public string PrintArray(int[] arr) // -----------------не делать тест
+        public string PrintArray(int[] arr) // -------------- не делать тест ?
         {
             string a = "";
 
@@ -157,7 +157,7 @@ namespace Homeworks
                 {
                     min = arr[i + 1];
                     index = i + 1;
-                }
+                }                
             }
             int[] result = new int[] { min, index };
             return result;
@@ -180,7 +180,7 @@ namespace Homeworks
 
             for (int i = 0; i < arr.Length / 2; i++)
             {
-                temp = arr[i];
+               temp = arr[i];
                 if (arr.Length % 2 == 0) //even
                 {
                     arr[i] = arr[middle];
@@ -211,7 +211,7 @@ namespace Homeworks
 
         public int[] GetNumbLessAv(int[] arr, int arithmMean)
         {
-            int count = 0, counter = 0;
+            int count = 0, counter=0;
 
             for (int i = 0; i < arr.Length; i++)
             {
@@ -220,7 +220,7 @@ namespace Homeworks
                     count++;
                 }
             }
-
+            
             int[] lessAvArr = new int[count];
             for (int i = 0; i < arr.Length; i++)
             {

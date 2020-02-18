@@ -55,7 +55,7 @@ namespace Homeworks
             return arr;
         }
 
-        public string PrintTwoDimensionalArrayString(string[,] arr) // ----------- не делать тест 
+        public string PrintTwoDimensionalArrayString(string[,] arr) // ---------------------- не проверять ? 
         {
             string a = "";
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -68,7 +68,7 @@ namespace Homeworks
             }
             return a;
         }
-        public string PrintTwoDimensionalArrayInt(int[,] arr) // --------------- не делать тест  
+        public string PrintTwoDimensionalArrayInt(int[,] arr) // ---------------------- не проверять ? 
         {
             string a = "";
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -102,14 +102,14 @@ namespace Homeworks
             {
                 if (number % i == 0)
                 {
-                    divArr[counter] = i;
+                    divArr[counter]= i;
                     counter++;
                 }
             }
             return divArr;
         }
 
-        public int[,] FillTwoDimensionalArrayInt(int[,] arr, int min = 0, int max = 100) // ------рандом - не делать тест
+        public int[,] FillTwoDimensionalArrayInt(int[,] arr, int min = 0, int max = 100) // ------ не проверять ?
         {
             Random rnd = new Random();
             int[,] arrNew = new int[arr.GetLength(0), arr.GetLength(1)];
@@ -123,8 +123,8 @@ namespace Homeworks
             }
             return arrNew;
         }
-        public string[,] FillTwoDimensionalArraySrting(string[,] arr, string symb) // -------рандом - не делать тест
-        {
+        public string[,] FillTwoDimensionalArraySrting(string[,] arr, string symb) // ---------- не проверять ?
+        {            
             //string[,] arrNew = new string[arr.GetLength(0), arr.GetLength(1)];
 
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -174,7 +174,7 @@ namespace Homeworks
 
         public int[] BigNumbersArr(int[,] arr, int amount)
         {
-            int miniCounter, count = 0;
+            int miniCounter, count=0;
             int[] bigNumbers = new int[amount];
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -343,6 +343,8 @@ namespace Homeworks
                 }
             }
             return markersCount;
+
+
         }
 
 

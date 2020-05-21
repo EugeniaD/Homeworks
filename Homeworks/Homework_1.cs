@@ -6,7 +6,6 @@ namespace Homeworks
 {
     public class Homework_1
     {
-
         public double[] CalcCreditPayments(int loanAmount, int years, double percentage)
         {
             double monthlyPayment, totalPayment;

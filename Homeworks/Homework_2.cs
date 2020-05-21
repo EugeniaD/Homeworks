@@ -45,7 +45,7 @@ namespace Homeworks
             return result;
         }
 
-        public int CheckRandom(int amount) // --------------рандом - не делать тест 
+        public int CheckRandom(int amount)
         {
             int n, count = 0;
             Random rnd = new Random();
@@ -118,9 +118,9 @@ namespace Homeworks
                 arr[i] = rnd.Next(min, max);
             }
             return arr;
-        }// -----------------рандом - не делать тест
+        }
 
-        public string PrintArray(int[] arr) // -----------------не делать тест
+        public string PrintArray(int[] arr) 
         {
             string a = "";
 
@@ -181,12 +181,12 @@ namespace Homeworks
             for (int i = 0; i < arr.Length / 2; i++)
             {
                 temp = arr[i];
-                if (arr.Length % 2 == 0) //even
+                if (arr.Length % 2 == 0)
                 {
                     arr[i] = arr[middle];
                     arr[middle] = temp;
                 }
-                else //odd
+                else 
                 {
                     arr[i] = arr[middle + 1];
                     arr[middle + 1] = temp;

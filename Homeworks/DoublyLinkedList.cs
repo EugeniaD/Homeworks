@@ -19,8 +19,6 @@ namespace Homeworks
         }
         #endregion
 
-        // МЕТОДЫ
-
         #region AddFirst
         public void AddFirst(int val) // добавление в начало списка
         {
@@ -159,7 +157,7 @@ namespace Homeworks
         {
             if (head == null) return;
 
-            tail.previous.next = tail.next; // null
+            tail.previous.next = tail.next; 
             tail = tail.previous;
 
             size--;
@@ -289,33 +287,6 @@ namespace Homeworks
         #region Reverse
         public void Reverse() // изменение порядка элементов списка на обратный
         {
-            //DoublyNode firstNode = head;
-            //DoublyNode newTail = tail;
-            //DoublyNode secondNode = newTail;
-
-            //int tempVal;
-
-            //for (int i = 0; i < size / 2; i++)
-            //{
-            //    tempVal = firstNode.value;
-            //    firstNode.value = secondNode.value;
-            //    secondNode.value = tempVal;
-
-            //    firstNode = firstNode.next;
-            //    secondNode = secondNode.previous;
-            //}
-            //-------
-            //DoublyNode tmp = head;
-
-            //while (tmp.next != null)
-            //{
-            //DoublyNode curr = tmp.next;
-            //tmp.next = tmp.next.next;
-            //tmp.previous = curr;
-            //curr.next = head;
-            //curr.previous = null;
-            //head = curr;
-
             DoublyNode tmp = null;
             DoublyNode curr = head;
 
@@ -331,10 +302,7 @@ namespace Homeworks
             {
                 head = tmp.previous;
             }
-
         }
-
-        #endregion
-        
+        #endregion        
     }
 }

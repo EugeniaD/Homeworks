@@ -7,8 +7,8 @@ namespace Homeworks
     public class LinkedList
     {
         private int size;
-        private Node head; //первый элемент
-        private Node tail; // последний элемент
+        private Node head; 
+        private Node tail; 
 
         #region Конструктор
         public LinkedList()
@@ -19,7 +19,6 @@ namespace Homeworks
         }
         #endregion
 
-        // МЕТОДЫ
 
         #region AddFirst
         public void AddFirst(int val) // добавление в начало списка

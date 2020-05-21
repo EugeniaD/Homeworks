@@ -21,7 +21,6 @@ namespace Homeworks
             };
         }
 
-        // МЕТОДЫ
 
         public int[] GetGuass()
         {
@@ -37,7 +36,7 @@ namespace Homeworks
                 GetResult(resultArrey, row, dividerCount);
                 GetSubtractedRow(row, dividerCount, matrixLength, i);
 
-                dividerCount++; // увеличиваем позицию делителя
+                dividerCount++; 
             }
             return resultArrey;
         }
@@ -51,7 +50,7 @@ namespace Homeworks
             {
                 if (matrix[i, j] != 0)
                 {
-                    row[j] = matrix[i, j] / matrix[i, dividerCount]; // делим элементы
+                    row[j] = matrix[i, j] / matrix[i, dividerCount]; 
                 }
             }
         }
@@ -61,7 +60,7 @@ namespace Homeworks
         /// </summary>
         public void GetSubtractedRow(int[] row, int dividerCount, int matrixLength, int i)
         {
-            if (i != 0) // первый ряд не обрабатываем
+            if (i != 0) 
             {
                 for (int k = i - 1; k >= 0; k--)
                 {

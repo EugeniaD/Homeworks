@@ -55,7 +55,7 @@ namespace Homeworks
             return arr;
         }
 
-        public string PrintTwoDimensionalArrayString(string[,] arr) // ----------- не делать тест 
+        public string PrintTwoDimensionalArrayString(string[,] arr)
         {
             string a = "";
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -68,7 +68,7 @@ namespace Homeworks
             }
             return a;
         }
-        public string PrintTwoDimensionalArrayInt(int[,] arr) // --------------- не делать тест  
+        public string PrintTwoDimensionalArrayInt(int[,] arr) 
         {
             string a = "";
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -109,7 +109,7 @@ namespace Homeworks
             return divArr;
         }
 
-        public int[,] FillTwoDimensionalArrayInt(int[,] arr, int min = 0, int max = 100) // ------рандом - не делать тест
+        public int[,] FillTwoDimensionalArrayInt(int[,] arr, int min = 0, int max = 100) 
         {
             Random rnd = new Random();
             int[,] arrNew = new int[arr.GetLength(0), arr.GetLength(1)];
@@ -123,10 +123,8 @@ namespace Homeworks
             }
             return arrNew;
         }
-        public string[,] FillTwoDimensionalArraySrting(string[,] arr, string symb) // -------рандом - не делать тест
+        public string[,] FillTwoDimensionalArraySrting(string[,] arr, string symb) 
         {
-            //string[,] arrNew = new string[arr.GetLength(0), arr.GetLength(1)];
-
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -211,7 +209,7 @@ namespace Homeworks
         {
             int temp, lehgthI = arr.GetLength(0), lehgthJ = arr.GetLength(1);
 
-            for (int i = 0; i <= lehgthI; i++) // сначала меняем местами
+            for (int i = 0; i <= lehgthI; i++) 
             {
                 for (int j = 0; j < lehgthJ; j++)
                 {
@@ -229,7 +227,7 @@ namespace Homeworks
         public int CheckCells(string[,] arr, int r, int c, string currentMarker)
         {
             int markersCount = 0;
-            // --------- проверяем существует и заполнена ли клетка СЛЕВА   -----------------------------------
+            // проверяем существует и заполнена ли клетка СЛЕВА  
             if (r - 1 >= 0 && arr[r - 1, c] == currentMarker)
             {
                 markersCount = 2; // если заполнена увеличиваем счетчик
@@ -243,7 +241,7 @@ namespace Homeworks
                     markersCount = 3;
                 }
             }
-            // --------- проверяем существует и заполнена ли клетка СЛЕВА СНИЗУ  ---------------------------------
+            //  проверяем существует и заполнена ли клетка СЛЕВА СНИЗУ  
 
             if (r - 1 >= 0 && c + 1 < 5 && markersCount != 3 && arr[r - 1, c + 1] == currentMarker)
             {
@@ -258,7 +256,7 @@ namespace Homeworks
                     markersCount = 3;
                 }
             }
-            // --------- проверяем существует и заполнена ли клетка СНИЗУ  ------------------------------
+            //  проверяем существует и заполнена ли клетка СНИЗУ  
             if (c + 1 < 5 && markersCount != 3 && arr[r, c + 1] == currentMarker)
             {
                 markersCount = 2;
@@ -272,7 +270,7 @@ namespace Homeworks
                     markersCount = 3;
                 }
             }
-            // --------- проверяем существует и заполнена ли клетка СНИЗУ СПРАВА  ------------------------------
+            //  проверяем существует и заполнена ли клетка СНИЗУ СПРАВА  
             if (r + 1 < 5 && c + 1 < 5 && markersCount != 3 && arr[r + 1, c + 1] == currentMarker)
             {
                 markersCount = 2;
@@ -286,7 +284,7 @@ namespace Homeworks
                     markersCount = 3;
                 }
             }
-            // --------- проверяем существует и заполнена ли клетка СПРАВА  ------------------------------
+            //  проверяем существует и заполнена ли клетка СПРАВА  
             if (r + 1 < 5 && markersCount != 3 && arr[r + 1, c] == currentMarker)
             {
                 markersCount = 2;
@@ -300,7 +298,7 @@ namespace Homeworks
                     markersCount = 3;
                 }
             }
-            // --------- проверяем существует и заполнена ли клетка СПРАВА СВЕРХУ  ------------------------------
+            //  проверяем существует и заполнена ли клетка СПРАВА СВЕРХУ  
             if (r + 1 < 5 && c - 1 >= 0 && markersCount != 3 && arr[r + 1, c - 1] == currentMarker)
             {
                 markersCount = 2;
@@ -314,7 +312,7 @@ namespace Homeworks
                     markersCount = 3;
                 }
             }
-            // --------- проверяем существует и заполнена ли клетка СВЕРХУ  ------------------------------
+            //  проверяем существует и заполнена ли клетка СВЕРХУ  
             if (c - 1 >= 0 && markersCount != 3 && arr[r, c - 1] == currentMarker)
             {
                 markersCount = 2;
@@ -328,7 +326,7 @@ namespace Homeworks
                     markersCount = 3;
                 }
             }
-            // --------- проверяем существует и заполнена ли клетка СЛЕВА СВЕРХУ ------------------------------ 
+            //  проверяем существует и заполнена ли клетка СЛЕВА СВЕРХУ  
             if (c - 1 >= 0 && r - 1 >= 0 && markersCount != 3 && arr[r - 1, c - 1] == currentMarker)
             {
                 markersCount = 2;

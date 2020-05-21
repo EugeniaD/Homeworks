@@ -7,7 +7,7 @@ namespace Homeworks
     public class ListArray
     {
         private int[] array;
-        private int realLength; // область которая заполнена значениями
+        private int realLength; 
 
         public int[] Array { get { return array; } }
         public int RealLength { get { return realLength; } }
@@ -26,7 +26,6 @@ namespace Homeworks
         }
         #endregion
 
-        // МЕТОДЫ
 
         #region ArrayExpansion
         public int[] ArrayExpansion()
@@ -323,5 +322,4 @@ namespace Homeworks
         }
         #endregion
     }
-
 }

@@ -63,6 +63,13 @@ namespace Homeworks
         #endregion
 
         #region HOMEWORK 1
+        // Рассчитать выплаты по кредиту:
+        //Рассчитать месячные выплаты(m) и суммарную выплату(s) по кредиту.
+        //О кредите известно, что он составляет n рублей, берется на y лет, под p процентов.
+        //Месячные выплаты находятся по формуле:
+        //            m = (n * p * (1 + p)y) / (12 * ((1 + p)y – 1)), где p выражается в долях единицы, а не процентах.
+        //Суммарная выплата представляет собой выплаты за все месяцы каждого года:
+        //s = (m * 12) * y
         static void Credit(Homework_1 hw1)
         {
             double percentage;
@@ -89,9 +96,10 @@ namespace Homeworks
             Console.WriteLine($"Суммарная выплата: {payments[1]}");
         }
 
+        //  Найти длину гипотенузы (по двум введенным пользователем катетам вычислить длину гипотенузы.)
+        //{a^2}+{b^2}={c^2}
         static void Hypotenuse(Homework_1 hw1)
         {
-            //{a^2}+{b^2}={c^2}
             double cathet_1, cathet_2, hypotenuse;
 
             cathet_1 = Random(1, 10);
@@ -102,11 +110,10 @@ namespace Homeworks
             Console.WriteLine($"Катет1: {cathet_1}, катет2: {cathet_2}, гипотенуза: {hypotenuse}");
         }
 
+        // Вывести уравнение прямой по координатам двух точек
+        // y = kx + b ; k = (y1 - y2) / (x1 - x2); b = y2 - k * x2
         static void StraightLineEquation(Homework_1 hw1)
         {
-            // Вывести уравнение прямой по координатам двух точек
-            // y = kx + b ; k = (y1 - y2) / (x1 - x2); b = y2 - k * x2
-
             float x1, y1, x2, y2;
 
             x1 = Random(-10, 10);
@@ -122,14 +129,14 @@ namespace Homeworks
             Console.WriteLine($"y={result[0]}*x + {result[1]}");
         }
 
+        // Найти корни квадратного уравнения. ax^{2}+bx+c = 0,
+        // d = b2 - 4ac
+        // где x — неизвестное, a,b,c — коэффициенты, причём a!= 0.
+        // d>0 корней два  -b +/- Math.Sqrt(d)) / (2 * a)
+        // d==0 корень один -(b / (2 * a))
+        // d<0 корней нет
         static void Roots(Homework_1 hw1)
         {
-            // Найти корни квадратного уравнения. ax^{2}+bx+c = 0,
-            // d = b2 - 4ac
-            // где x — неизвестное, a,b,c — коэффициенты, причём a!= 0.
-            // d>0 корней два  -b +/- Math.Sqrt(d)) / (2 * a)
-            // d==0 корень один -(b / (2 * a))
-            // d<0 корней нет
             double a, b, c;
 
             a = Random(-100, 100);
@@ -159,9 +166,9 @@ namespace Homeworks
             }
         }
 
+        // Посчитать выражение(max(a* b* c, a+b+c) + 3). a, b и c - рандом от -10 до 10
         static void MaxPlusThree(Homework_1 hw1)
         {
-            //(max(a*b*c, a+b+c) + 3)
             int a, b, c, sum, mult, result;
             a = Random(-10, 10);
             b = Random(-10, 10);
@@ -188,11 +195,10 @@ namespace Homeworks
             Console.WriteLine(result);
         }
 
+        // Вводятся два целых числа. (рандом от -100 до 100) Проверить, делится ли первое на второе. 
+        // Вывести на экран сообщение об этом, а также остаток (если он есть) и частное (в любом случае). 
         static void EuclideanDivision(Homework_1 hw1)
         {
-            // Вводятся два целых числа. (рандом от -100 до 100) Проверить, делится ли первое на второе. 
-            // Вывести на экран сообщение об этом, а также остаток (если он есть) и частное (в любом случае). 
-
             int a, b;
 
             a = Random(-100, 100);
@@ -218,14 +224,11 @@ namespace Homeworks
             }
         }
 
+        // Определить, какой четверти принадлежит точка с координатами (x, y). x и y - рандом от -10 до 10
+
         static void CoordinateSystem(Homework_1 hw1)
         {
-            // Определить, какой четверти принадлежит точка с координатами (x, y). x и y - рандом от -10 до 10
-
             int x, y;
-
-            //x = Random(-100, 100);
-            //y = Random(-100, 100);
             x = 0;
             y = 0;
 
@@ -239,19 +242,14 @@ namespace Homeworks
             {
                 Console.WriteLine($"{quarter} четверть x: {x}, y: {y}");
             }
-
-
         }
-
+        // вводятся координаты А (x;y) рандом от -15 до 15 точки и радиус круга (r), рандом от -10 до 10
+        // определить, принадлежит ли данная точка кругу, если его центр находится в начале координат. 
         static void Radius(Homework_1 hw1)
         {
-            // вводятся координаты А (x;y) рандом от -15 до 15 точки и радиус круга (r), рандом от -10 до 10
-            // определить, принадлежит ли данная точка кругу, если его центр находится в начале координат. 
+
             double x, y, r, hypotenuse;
 
-            //x = Random(-15, 15);
-            //y = Random(-15, 15);
-            //r = Random(-10, 10);
             x = -4;
             y = 8;
             r = 10;
@@ -275,21 +273,19 @@ namespace Homeworks
             }
             Console.WriteLine($"радиус: {r}, гипотенуза: {hypotenuse}");
         }
-
+        // Вычислить факториал числа n. n - рандом от 1 до 15; 5! = 5 * 4 * 3 * 2 * 1 = 120
         static void Factorial(Homework_1 hw1)
         {
-            // Вычислить факториал числа n. n - рандом от 1 до 15; 5! = 5 * 4 * 3 * 2 * 1 = 120
+
 
             int n = Random(1, 15);
             int fact = hw1.CalcFactorial(n);
 
             Console.WriteLine($"факториал числа {n}: {fact}");
         }
-
+        // Вывести таблицу значений функции y = -0.23x2 + x. Значения аргумента (x) задаются минимумом, максимумом и шагом. (как вариант, ещё и попробовать нарисовать в консоли)
         static void ValueTable(Homework_1 hw1)
         {
-            // Вывести таблицу значений функции y = -0.23x2 + x. Значения аргумента (x) задаются минимумом, максимумом и шагом. (как вариант, ещё и попробовать нарисовать в консоли)
-
             double x, y;
 
             for (x = -10; x <= 10; x++)
@@ -301,10 +297,10 @@ namespace Homeworks
                 Console.WriteLine("___________________");
             }
         }
+        // Найти сумму и произведение цифр введенного натурального числа. рандом от 10000 до 100000000
 
         static void SumAndMultDigits(Homework_1 hw1)
         {
-            // Найти сумму и произведение цифр введенного натурального числа. рандом от 10000 до 100000000
 
             int x, sumRes = 0, multRes = 1;
             int[] sum = new int[] { }, mult = new int[] { };
@@ -327,10 +323,9 @@ namespace Homeworks
             Console.WriteLine($"сумма равна {sum[1]}, произведение равно {mult[1]}");
         }
 
+        // Докажите, что для множества натуральных чисел верно 1+2+...+n = n(n+1)/2
         static void Evidence(Homework_1 hw1)
         {
-            // Докажите, что для множества натуральных чисел верно 1+2+...+n = n(n+1)/2
-
             int n = Random(1, 1000);
 
             int left = hw1.SumNaturalNumbers(n);
@@ -344,11 +339,9 @@ namespace Homeworks
         #endregion
 
         #region HOMEWORK 2
-
+        //  123 => 321.
         static void ReverseNumber(Homework_2 hw2)
         {
-            //  123 => 321.
-
             int n, reverseN;
             n = Random(1, 100000);
             reverseN = hw2.FlipNumberBackwards(n);
@@ -356,6 +349,7 @@ namespace Homeworks
             Console.WriteLine($"n = {n}, reverse = {reverseN}");
         }
 
+        //Написать программу, которая будет складывать, вычитать, умножать или делить два числа.Числа и знак операции вводятся пользователем.После выполнения вычисления программа не должна завершаться, а должна запрашивать новые данные для вычислений.Завершение программы должно выполняться при вводе символа '0' в качестве знака операции. Если пользователь вводит неверный знак (не '0', '+', '-', '*', '/'), то программа должна сообщать ему об ошибке и снова запрашивать знак операции.Также сообщать пользователю о невозможности деления на ноль, если он ввел 0 в качестве делителя.
         static void Calc(Homework_2 hw2)
         {
             char sign = '+';
@@ -416,12 +410,11 @@ namespace Homeworks
             }
         }
 
+        // Проверить корректность работы генератора псевдослучайных чисел на выборке не менее 1000 случайных чисел. 
+        // Программа должна выдать около 50%. 
+        // Можно увеличить число генераций, например до 10 тысяч. В таком случае отклонение от 50% будет меньше
         static void CheckRandomGenerator(Homework_2 hw2)
         {
-            // Проверить корректность работы генератора псевдослучайных чисел на выборке не менее 1000 случайных чисел. 
-            // Программа должна выдать около 50%. 
-            // Можно увеличить число генераций, например до 10 тысяч. В таком случае отклонение от 50% будет меньше
-
             int count, amount = 10000;
 
             count = hw2.CheckRandom(amount);
@@ -430,13 +423,11 @@ namespace Homeworks
             Console.WriteLine($"Even numbers {count} out of {amount}");
             Console.WriteLine($"Even numbers {percentage}%");
         }
-
+        // 4. Угадать случайное число не более чем за 10 попыток.     
+        // После каждой неудачной попытки должно сообщаться больше или меньше введенное пользователем число, чем то, что загадано.                                     
+        // Если за 10 попыток число не отгадано, то вывести загаданное число.  
         static void GuessRandomNumber(Homework_2 hw2)
         {
-            // 4. Угадать случайное число не более чем за 10 попыток.     
-            // После каждой неудачной попытки должно сообщаться больше или меньше введенное пользователем число, чем то, что загадано.                                     
-            // Если за 10 попыток число не отгадано, то вывести загаданное число.          
-
             int number = Random(0, 101), counter = 0, guess, attempts = 10;
 
             Console.WriteLine(number);
@@ -458,11 +449,9 @@ namespace Homeworks
                 Console.WriteLine($"Вы не угадали 10 раз. Число было равно {number}");
             }
         }
-
+        // 5. Вывести на экран столько элементов ряда Фибоначчи, сколько указал пользователь.
         static void Fibonacci(Homework_2 hw2)
         {
-            // 5. Вывести на экран столько элементов ряда Фибоначчи, сколько указал пользователь.
-
             int n;
             Console.WriteLine("Задайте количество эллементов ряда");
 
@@ -472,10 +461,9 @@ namespace Homeworks
 
             Console.WriteLine(fibStr);
         }
-
+        // Задан массив из 20 элементов (рандом от -100 до 100). Найти наибольший элемент массива и его индекс
         static void MaxInArray(Homework_2 hw2)
         {
-            // Задан массив из 20 элементов (рандом от -100 до 100). Найти наибольший элемент массива и его индекс
             int length = 20;
             int[] arr = hw2.FillArray(length);
             int[] maxInArr = hw2.FindMaxInArray(arr);
@@ -501,12 +489,11 @@ namespace Homeworks
             Console.WriteLine($"arr {arrStr}");
             Console.WriteLine($"reverse {reverseArrStr}");
         }
-
+        // Поменять местами первую и вторую половину массива, 
+        // 1 2 3 4  => 3 4 1 2.
+        // 1 2 3 4 5  =>  4 5 3 1 2
         static void SwapArr(Homework_2 hw2)
         {
-            // Поменять местами первую и вторую половину массива, 
-            // 1 2 3 4  => 3 4 1 2.
-            // 1 2 3 4 5  =>  4 5 3 1 2
             int length = 6;
             int[] arr, swapArr;
             string arrStr, swapArrStr;
@@ -520,10 +507,10 @@ namespace Homeworks
             Console.WriteLine($"arr {arrStr}");
             Console.WriteLine($"swap {swapArrStr}");
         }
-
+        //4. Найти в массиве те элементы, значение которых меньше среднего арифметического, взятого от всех элементов массива.
         static void ArithmeticalMean(Homework_2 hw2)
         {
-            //4. Найти в массиве те элементы, значение которых меньше среднего арифметического, взятого от всех элементов массива.
+
             int length = 6;
             int[] arr = hw2.FillArray(length);
             string arrStr = hw2.PrintArray(arr);
@@ -535,12 +522,11 @@ namespace Homeworks
             Console.WriteLine($"arr {newArrStr}");
 
         }
+        // 5. В массиве найти сумму элементов, находящихся между минимальным и максимальным элементами. 
+        // Сами минимальный и максимальный элементы в сумму не включать.
 
         static void SumBetweenMinMax(Homework_2 hw2)
         {
-            // 5. В массиве найти сумму элементов, находящихся между минимальным и максимальным элементами. 
-            // Сами минимальный и максимальный элементы в сумму не включать.
-
             int length = 10, sum;
             int[] arr = hw2.FillArray(length, 0, 20);
             string arrStr = hw2.PrintArray(arr);
@@ -557,12 +543,11 @@ namespace Homeworks
         #endregion
 
         #region HOMEWORK 3
+        // 1.Посчитать, сколько раз встречается определенная цифра в введенной последовательности чисел.
+        // Количество вводимых чисел и цифра, которую необходимо посчитать, задаются вводом с клавиатуры.
 
         static void QtyDigits(Homework_3 hw3)
         {
-            // 1.Посчитать, сколько раз встречается определенная цифра в введенной последовательности чисел.
-            // Количество вводимых чисел и цифра, которую необходимо посчитать, задаются вводом с клавиатуры.
-
             int amount, digit, num, count = 0;
 
             Console.WriteLine("Введите количество цифр:");
@@ -584,19 +569,15 @@ namespace Homeworks
                     continue;
                 }
                 // --------РАНДОМНЫЕ ЧИСЛА --------------------------------
-                //num = Random();
-                //Console.WriteLine(num);
                 count += hw3.FindNumberOfDigits(num, digit);
             }
             Console.WriteLine($"Число {digit} встречается {count} раз.");
         }
-
+        // Вывести на экран "прямоугольник", образованный из двух видов символов. 
+        // Контур прямоугольника должен состоять из одного символа, а в "заливка" - из другого. 
+        // Размеры прямоугольника, а также используемые символы задаются вводом с клавиатуры.
         static void Rectangle(Homework_3 hw3)
         {
-            // Вывести на экран "прямоугольник", образованный из двух видов символов. 
-            // Контур прямоугольника должен состоять из одного символа, а в "заливка" - из другого. 
-            // Размеры прямоугольника, а также используемые символы задаются вводом с клавиатуры.
-
             string symb1, symb2;
             int w, h;
             Console.WriteLine("Введите ширину прямоугольника");
@@ -613,17 +594,15 @@ namespace Homeworks
 
             Console.WriteLine(rectStr);
         }
-
+        //3. В введенном промежутке натуральных чисел найти те, количество делителей у которых не меньше введенного значения.  Для найденных чисел вывести на экран количество делителей и все делители.
+        //	Примерный вывод:
+        //	Числовой промежуток: 21 .. 30
+        //	Количество делителей (не менее): 5
+        //	24 - 8 - 1 2 3 4 6 8 12 24
+        //	28 - 6 - 1 2 4 7 14 28
+        //	30 - 8 - 1 2 3 5 6 10 15 30
         static void NumberOfDividers(Homework_3 hw3, Homework_2 hw2)
         {
-            //3. В введенном промежутке натуральных чисел найти те, количество делителей у которых не меньше введенного значения.  Для найденных чисел вывести на экран количество делителей и все делители.
-            //	Примерный вывод:
-            //	Числовой промежуток: 21 .. 30
-            //	Количество делителей (не менее): 5
-            //	24 - 8 - 1 2 3 4 6 8 12 24
-            //	28 - 6 - 1 2 4 7 14 28
-            //	30 - 8 - 1 2 3 5 6 10 15 30
-
             int a, b, minOfDiv, divCounter;
             int[] divArr;
             string divStr;
@@ -670,7 +649,7 @@ namespace Homeworks
             do
             {
                 int r, c;
-                // ---------  ДВА ИГРОКА проверяем валидность координат -----------------------------------------
+                //   ДВА ИГРОКА проверяем валидность координат 
 
                 //Console.WriteLine("Введите номер строки");
                 //try
@@ -693,18 +672,17 @@ namespace Homeworks
                 //    continue;
                 //}
 
-                // ---------  КОМП С СОБОЙ ИГРАЕТ -----------------------------------------
+                //   КОМП С СОБОЙ ИГРАЕТ 
                 //r = rnd.Next(0, height);
                 //c = rnd.Next(0, width);
 
-                // ---------  ЧЕЛОВЕК-X & КОМП-O ----------------------------------------------
+                //   ЧЕЛОВЕК-X & КОМП-O 
                 if (markedCellsCount % 2 == 0)
                 {
                 AskRow:
                     Console.WriteLine($"Введите номер строки от 0 до {arr.GetLength(0) - 1}");
                     try
                     {
-
                         r = Convert.ToInt32(Console.ReadLine()); // номер ряда 
                         if (r > arr.GetLength(0) || r < 0)
                         {
@@ -747,25 +725,25 @@ namespace Homeworks
                     c = Random(0, width);
                 }
 
-                // --------- выбираем Х или О --------------
+                //  выбираем Х или О 
                 string currentMarker = markedCellsCount % 2 == 0 ? "X" : "0";
 
-                // --------- проверяем занята ли клетка -----------
+                //  проверяем занята ли клетка 
                 if (arr[r, c] != "+")
                 {
                     Console.WriteLine("Увы! Эта клетка занята!");
                     continue;
                 }
-                // --------- ставим Х или О ------------------------
+                //  ставим Х или О 
                 arr[r, c] = currentMarker;
 
                 arrStng = hw3.PrintTwoDimensionalArrayString(arr);
                 Console.Write(arrStng);
 
-                // --------- проверяем клетки вокруг ------------------------------------
+                //  проверяем клетки вокруг 
                 int markersCount = hw3.CheckCells(arr, r, c, currentMarker);
 
-                // --------- ПОБЕДА ------------------------------------
+                //  ПОБЕДА 
                 if (markersCount == 3)
                 {
                     Console.WriteLine($"Игрок {currentMarker} победил!");
@@ -780,17 +758,14 @@ namespace Homeworks
 
             Console.WriteLine("Однако, ничья!");
         }
-
+        //  В квадратной матрице 10x10 обменять значения элементов в каждой строке, расположенные на главной и побочной диагоналях.
         static void SwapDiagonals(Homework_3 hw3)
         {
-
-            //  В квадратной матрице 10x10 обменять значения элементов в каждой строке, расположенные на главной и побочной диагоналях.
-
             int length = 5;
 
             int[,] arr = new int[length, length];
             arr = hw3.FillTwoDimensionalArrayInt(arr);
-            string arrStr = hw3.PrintTwoDimensionalArrayInt(arr); // Может ли метод принимать разные типы данных
+            string arrStr = hw3.PrintTwoDimensionalArrayInt(arr);
             Console.WriteLine(arrStr);
 
             Console.WriteLine("------------------------");
@@ -798,21 +773,19 @@ namespace Homeworks
 
             arr = hw3.SwapDiag(arr);
 
-            arrStr = hw3.PrintTwoDimensionalArrayInt(arr); // Может ли метод принимать разные типы данных
+            arrStr = hw3.PrintTwoDimensionalArrayInt(arr);
             Console.WriteLine(arrStr);
         }
-
+        // 3. Найти количество элементов массива, которые больше своих левого, правого, верхнего и нижнего соседа одновременно.
         static void CountingBigNumbers(Homework_3 hw3, Homework_2 hw2)
         {
-            //! 3. Найти количество элементов массива, которые больше своих левого, правого, верхнего и нижнего соседа одновременно.
-
             int l = 6, bigNumberCounter;
             int[,] arr = new int[l, l];
             int[] bigNumbers;
             string arrStr, bigNumbersStr;
 
             arr = hw3.FillTwoDimensionalArrayInt(arr);
-            arrStr = hw3.PrintTwoDimensionalArrayInt(arr); // как вывести красиво ??
+            arrStr = hw3.PrintTwoDimensionalArrayInt(arr);
 
             Console.Write(arrStr);
 
@@ -824,6 +797,5 @@ namespace Homeworks
             Console.WriteLine($"bigNumberCounter - {bigNumberCounter}");
         }
         #endregion
-
     }
 }
